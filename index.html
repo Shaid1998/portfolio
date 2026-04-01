@@ -279,16 +279,171 @@
 </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact">
+<section class="contact-section" id="contact">
     <div class="wrap">
-        <div class="contact-grid">
-            <div class="contact-card reveal"><i class="fas fa-envelope" style="font-size:2rem; color:var(--accent);"></i><h3 style="margin:16px 0;">shaidurrahman225@gmail.com</h3><p><i class="fas fa-phone"></i> +880 1928 466 221</p><p><i class="fab fa-github"></i> github.com/Shaid1998</p><div style="margin-top:24px; background:rgba(16,185,129,0.1); border-radius:40px; padding:12px; text-align:center;"><span class="live-dot"></span> Available for immediate start</div></div>
-            <div class="form-card reveal"><h3>Send a Message</h3><input type="text" id="contactName" placeholder="Your name" style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"><input type="email" id="contactEmail" placeholder="Email" style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"><textarea id="contactMsg" rows="4" placeholder="Tell me about your project..." style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"></textarea><button class="btn btn-primary" onclick="submitContact()" style="width:100%">Send Message →</button><div id="contactSuccess" style="display:none; margin-top:16px; color:var(--emerald);">✓ Message sent!</div></div>
+        <div class="section-header reveal">
+            <div class="section-tag">Get In Touch</div>
+            <h2 class="section-title">Let's discuss your <em>next project</em></h2>
+        </div>
+        <div class="contact-enhanced-grid">
+            <!-- Left Side - Business Card / Contact Info -->
+            <div class="contact-business-card reveal">
+                <div class="business-badge">
+                    <i class="fas fa-briefcase"></i> Available for hire
+                </div>
+                <h3>Shaidur <span>Rahman</span></h3>
+                <p>Senior Laravel Backend Engineer</p>
+
+                <!-- HR Friendly Info Grid -->
+                <div class="hr-info-grid">
+                    <div class="hr-info-item">
+                        <div class="hr-info-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="hr-info-label">Experience</div>
+                        <div class="hr-info-value">2+ Years</div>
+                    </div>
+                    <div class="hr-info-item">
+                        <div class="hr-info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="hr-info-label">Availability</div>
+                        <div class="hr-info-value">Immediate</div>
+                    </div>
+                    <div class="hr-info-item">
+                        <div class="hr-info-icon"><i class="fas fa-globe"></i></div>
+                        <div class="hr-info-label">Timezone</div>
+                        <div class="hr-info-value">GMT+6</div>
+                    </div>
+                    <div class="hr-info-item">
+                        <div class="hr-info-icon"><i class="fas fa-language"></i></div>
+                        <div class="hr-info-label">English</div>
+                        <div class="hr-info-value">Fluent</div>
+                    </div>
+                </div>
+
+                <!-- Contact Methods -->
+                <div class="contact-methods">
+                    <a href="mailto:shaidurrahman225@gmail.com" class="contact-method-item">
+                        <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="method-details">
+                            <h4>Email</h4>
+                            <p>shaidurrahman225@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="tel:+8801928466221" class="contact-method-item">
+                        <div class="method-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="method-details">
+                            <h4>Phone / WhatsApp</h4>
+                            <p>+880 1928 466 221</p>
+                        </div>
+                    </a>
+                    <div class="contact-method-item">
+                        <div class="method-icon"><i class="fab fa-skype"></i></div>
+                        <div class="method-details">
+                            <h4>Video Calls</h4>
+                            <p>Available on Zoom / Google Meet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Response Time Guarantee -->
+                <div class="response-time">
+                    <i class="fas fa-bolt" style="color: var(--emerald);"></i>
+                    <strong>Response within 24 hours</strong> — Guaranteed reply to all inquiries
+                </div>
+            </div>
+
+            <!-- Right Side - Contact Form -->
+            <div class="form-premium-enhanced reveal">
+                <h3>Send a <span>message</span></h3>
+                <p>Fill out the form below and I'll get back to you within 24 hours.</p>
+                <form id="enhancedContactForm" style="flex: 1; display: flex; flex-direction: column;">
+                    <div class="form-row">
+                        <input type="text" class="input-field" id="enhancedName" placeholder="Full name *" required>
+                        <input type="email" class="input-field" id="enhancedEmail" placeholder="Email address *" required>
+                    </div>
+                    <input type="text" class="input-field" id="enhancedSubject" placeholder="Subject" style="margin-bottom: 20px;">
+                    <textarea class="input-field" id="enhancedMessage" rows="4" placeholder="Tell me about your project, timeline, and requirements..."></textarea>
+                    <button type="button" class="submit-enhanced" onclick="submitEnhancedContact()">
+                        <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div id="enhancedContactSuccess" class="form-success-enhanced">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. I'll reply within 24 hours.
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </section>
 
-<footer>© 2025 Md. Shaidur Rahman — Laravel + React Engineer | Built with <i class="fas fa-heart" style="color:var(--rose);"></i></footer>
+<!-- FOOTER SECTION HTML -->
+<footer class="footer-premium">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="footer-logo">Shaidur<span style="color: var(--accent);">.</span>dev</div>
+                <p>Senior Laravel Backend Engineer specializing in scalable APIs, multi-vendor platforms, and enterprise-grade web applications. 2+ years of proven experience delivering high-quality solutions.</p>
+                <div class="availability-footer">
+                    <span class="live-dot"></span>
+                    <span style="font-size: 0.8rem;">Open for opportunities · Immediate joiner</span>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> About</a></li>
+                    <li><a href="#skills"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Skills</a></li>
+                    <li><a href="#experience"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Experience</a></li>
+                    <li><a href="#projects"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Projects</a></li>
+                </ul>
+            </div>
+
+            <!-- Expertise Column -->
+            <div class="footer-column">
+                <h4>Expertise</h4>
+                <ul>
+                    <li><a href="#">Laravel / PHP Development</a></li>
+                    <li><a href="#">RESTful API Design</a></li>
+                    <li><a href="#">MySQL Optimization</a></li>
+                    <li><a href="#">React.js Integration</a></li>
+                    <li><a href="#">Multi-vendor Platforms</a></li>
+                </ul>
+            </div>
+
+            <!-- Tech Stack & Contact Column -->
+            <div class="footer-column">
+                <h4>Tech Stack</h4>
+                <div class="tech-stack-footer">
+                    <span>Laravel</span>
+                    <span>PHP 8+</span>
+                    <span>MySQL</span>
+                    <span>React</span>
+                    <span>Redis</span>
+                    <span>REST API</span>
+                    <span>Git</span>
+                    <span>Docker</span>
+                </div>
+                <h4 style="margin-top: 24px;">Hire Me</h4>
+                <ul>
+                    <li><a href="mailto:shaidurrahman225@gmail.com"><i class="fas fa-envelope"></i> shaidurrahman225@gmail.com</a></li>
+                    <li><a href="tel:+8801928466221"><i class="fas fa-phone"></i> +880 1928 466 221</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© 2025 Md. Shaidur Rahman — Senior Laravel Backend Engineer. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Hire Modal -->
 <div id="hireModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 2000; justify-content: center; align-items: center;">
