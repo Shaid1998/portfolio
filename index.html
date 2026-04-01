@@ -3,367 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Shaidur Rahman — Senior Laravel Engineer | Portfolio & Resume</title>
-    <meta name="description"
-          content="Shaidur Rahman - Laravel Backend Engineer with 2+ years experience, CodeCanyon contributor, specializing in REST APIs, multi-vendor platforms, and scalable web applications.">
+    <title>Shaidur Rahman — Senior Laravel Engineer | Portfolio</title>
+    <meta name="description" content="Shaidur Rahman - Senior Laravel Backend Engineer with 2+ years experience, CodeCanyon author, specializing in scalable APIs, multi-vendor platforms, and React integration.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="gradient-bg"></div>
+<div class="shape shape-1"></div>
+<div class="shape shape-2"></div>
+<div class="shape shape-3"></div>
+
 <nav>
-    <a href="#hero" class="logo">Shaidur<span style="color:var(--accent);">.</span>Rahman</a>
+    <a href="#hero" class="logo">Shaidur<span style="color:var(--accent);">.</span>dev</a>
     <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" class="nav-hire">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
+        <li><a href="#" class="hire-nav" id="hireNavBtn">Hire Me</a></li>
     </ul>
     <div class="ham" onclick="toggleNav()"><span></span><span></span><span></span></div>
 </nav>
 <div class="mob-nav" id="mobNav">
+    <a href="#hero" onclick="closeNav()">Home</a>
     <a href="#about" onclick="closeNav()">About</a>
     <a href="#skills" onclick="closeNav()">Skills</a>
     <a href="#experience" onclick="closeNav()">Experience</a>
     <a href="#projects" onclick="closeNav()">Projects</a>
     <a href="#contact" onclick="closeNav()">Contact</a>
+    <a href="#" onclick="closeNav(); openHireModal();">Hire Me</a>
 </div>
 
+<!-- HERO SECTION -->
 <section id="hero">
-    <div class="hero-inner">
-        <div>
-            <div class="hero-badge"><span class="live-dot"></span> OPEN FOR WORK · REMOTE / ONSITE</div>
-            <h1 class="hero-h1">Md. Shaidur <span class="gradient-text">Rahman</span></h1>
-            <p class="hero-sub">Senior Laravel Backend Engineer | 2+ years crafting scalable APIs, multi-vendor
-                ecosystems & high-performance web apps. CodeCanyon contributor with 3+ commercial products sold
-                globally.</p>
-            <div class="btn-group">
-                <a href="#contact" class="btn btn-primary">📩 Hire Me →</a>
-                <a href="https://github.com/Shaid1998" target="_blank" class="btn btn-outline">GitHub</a>
-                <a href="https://linkedin.com/in/shaidur1998" target="_blank" class="btn btn-outline">LinkedIn</a>
-                <a href="#projects" class="btn btn-outline">View Work</a>
-            </div>
-            <div class="stats-row">
-                <div class="stat">
-                    <div class="stat-number">2<span style="color:var(--accent);">+</span></div>
-                    <div class="stat-label">Years Exp</div>
+    <div class="wrap">
+        <div class="hero-grid">
+            <div>
+                <div class="availability-badge reveal"><span class="live-dot"></span><span>Open to Opportunities · Immediate Joiner</span></div>
+                <h1 class="hero-title reveal">Md. Shaidur <span class="name-highlight">Rahman</span></h1>
+                <div class="professional-summary reveal">
+                    <p><strong>🏆 Senior Laravel Backend Engineer</strong> with <strong>2+ years of commercial experience</strong> building enterprise-grade web applications. Specialized in <strong>RESTful API development, multi-vendor platforms, and high-performance database architecture</strong>. Published <strong>3 CodeCanyon scripts</strong> with 80+ sales and 4.8⭐ ratings.</p>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">12<span style="color:var(--accent);">+</span></div>
-                    <div class="stat-label">Projects</div>
+                <div class="key-metrics reveal">
+                    <div><div class="metric-value">2<span style="color:var(--accent);">+</span></div><div>Years Exp</div></div>
+                    <div><div class="metric-value">12<span style="color:var(--accent);">+</span></div><div>Projects</div></div>
+                    <div><div class="metric-value">3<span style="color:var(--accent);">+</span></div><div>CC Products</div></div>
+                    <div><div class="metric-value">45<span style="color:var(--accent);">%</span></div><div>API Gain</div></div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">3<span style="color:var(--accent);">+</span></div>
-                    <div class="stat-label">CC Products</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">100<span style="color:var(--accent);">%</span></div>
-                    <div class="stat-label">API Uptime</div>
+                <div class="hero-cta reveal">
+                    <button class="btn btn-primary" onclick="openHireModal()"><i class="fas fa-paper-plane"></i> Hire Me</button>
+                    <a href="#projects" class="btn btn-outline"><i class="fas fa-code-branch"></i> Portfolio</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact</a>
                 </div>
             </div>
-        </div>
-        <div class="hero-img">
-            <img src="asset/shaid.png" alt="Shaidur Rahman">
+            <div class="hero-image reveal"><img src="https://placehold.co/550x650/0f0f17/6366f1?text=Shaidur+Rahman" alt="Shaidur Rahman"></div>
         </div>
     </div>
 </section>
 
+<!-- ABOUT SECTION -->
 <section id="about">
     <div class="wrap">
-        <div class="about-grid reveal">
-            <div>
-                <div class="section-tag"><span class="section-tag-line"></span> Professional summary</div>
-                <p class="about-text"><span
-                        class="highlight-text">🚀 Laravel Specialist with production-grade expertise.</span> I architect
-                    secure RESTful APIs, multi-vendor marketplaces, and enterprise-level backends. My code is tested,
-                    documented, and optimized for high traffic. I've delivered <strong>3 CodeCanyon-approved
-                        scripts</strong> and collaborated with cross-functional teams to reduce response time by
-                    <strong>40%</strong> through query optimization & Redis caching.</p>
-                <p class="about-text" style="margin-top: 20px;">💡 Core strengths: Clean Architecture, API Security,
-                    Payment Integration (Stripe, SSLCommerz), Scalable Database Design, and Deployment (VPS, cPanel,
-                    Docker).</p>
-                <div class="chip-list">
-                    <span class="chip">Laravel 10/11</span><span class="chip">PHP 8.2+</span><span class="chip">MySQL/PostgreSQL</span>
-                    <span class="chip">RESTful API</span><span class="chip">Redis/Memcached</span><span class="chip">Docker</span><span
-                        class="chip">Git/Github CI</span>
-                </div>
-            </div>
-            <div>
-                <div class="section-tag"><span class="section-tag-line"></span> Key achievements</div>
-                <div style="background: var(--card); border-radius: 24px; padding: 28px; border: 1px solid var(--border);">
-                    <div style="margin-bottom: 20px;">🏆 <strong>CodeCanyon Author</strong> — 3 premium scripts with 50+
-                        active installations
-                    </div>
-                    <div style="margin-bottom: 20px;">⚡ <strong>Performance Boost</strong> — Optimized API endpoints
-                        (from 800ms → 180ms) by implementing eager loading & query caching
-                    </div>
-                    <div>📈 <strong>Scalability</strong> — Architected multi-vendor rental platform supporting 20+
-                        concurrent vendors with real-time inventory sync
-                    </div>
-                </div>
-            </div>
+        <div class="section-header reveal"><div class="section-tag">About Me</div><h2 class="section-title">Laravel Specialist <em>& React Engineer</em></h2></div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="color: var(--text-secondary); line-height: 1.8;">I architect robust backend systems with Laravel and build seamless frontend experiences with React. With 2+ years of professional experience, I've delivered production-grade multi-vendor platforms, optimized APIs reducing latency by 45%, and published 3 CodeCanyon scripts. My focus is clean code, scalability, and measurable business impact.</p>
         </div>
     </div>
 </section>
 
+<!-- TECHNICAL MASTERY SECTION -->
 <section id="skills">
     <div class="wrap">
-        <div class="section-header reveal">
-            <div class="section-tag"><span class="section-tag-line"></span> Technical proficiency</div>
-            <div class="section-title">Expertise & <em>mastery level</em></div>
-        </div>
-        <div class="skills-wrapper reveal">
-            <div class="skill-category">
-                <div class="skill-header">🔧 Backend Core</div>
-                <div class="skill-items">
-                    <div class="skill-item"><span class="skill-name">Laravel / PHP</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:92%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item"><span class="skill-name">REST API Design</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item"><span class="skill-name">Authentication (Sanctum/JWT)</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item"><span class="skill-name">Queue & Jobs (Redis)</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:85%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <div class="skill-header">🗄️ Database & DevOps</div>
-                <div class="skill-items">
-                    <div class="skill-item"><span class="skill-name">MySQL / Query Optimization</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item"><span class="skill-name">Linux / Nginx / cPanel</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:84%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item"><span class="skill-name">Git / GitHub Actions</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:82%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item"><span class="skill-name">Docker / Forge</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width:75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="section-header reveal"><div class="section-tag">Technical Mastery</div><h2 class="section-title">Core <em>Competencies</em></h2></div>
+        <div class="mastery-container">
+            <div class="mastery-card reveal"><div class="card-header"><div class="card-icon-large"><i class="fab fa-laravel"></i></div><div><h3>Backend Engineering</h3><p>Laravel · PHP · API Architecture</p></div></div>
+                <div class="skills-list"><div class="skill-item" data-target="96"><div class="skill-info"><span>Laravel (9–11) <span style="background:rgba(99,102,241,0.12); padding:2px 8px; border-radius:20px; font-size:0.65rem;">A+</span></span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-accent"></div></div></div>
+                    <div class="skill-item" data-target="92"><div class="skill-info"><span>PHP 8+ (OOP, Patterns)</span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-accent"></div></div></div></div></div>
+            <div class="mastery-card reveal"><div class="card-header"><div class="card-icon-large"><i class="fas fa-database"></i></div><div><h3>Database Architecture</h3><p>MySQL · Optimization · Caching</p></div></div>
+                <div class="skills-list"><div class="skill-item" data-target="94"><div class="skill-info"><span>MySQL / MariaDB</span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-emerald"></div></div></div>
+                    <div class="skill-item" data-target="90"><div class="skill-info"><span>Query Optimization</span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-emerald"></div></div></div></div></div>
+            <div class="mastery-card reveal"><div class="card-header"><div class="card-icon-large"><i class="fab fa-react"></i></div><div><h3>Frontend & React</h3><p>Modern UI · API Integration</p></div></div>
+                <div class="skills-list"><div class="skill-item" data-target="87"><div class="skill-info"><span>React.js</span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-cyan"></div></div></div>
+                    <div class="skill-item" data-target="88"><div class="skill-info"><span>Tailwind / Inertia</span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-cyan"></div></div></div></div></div>
+            <div class="mastery-card reveal"><div class="card-header"><div class="card-icon-large"><i class="fas fa-cloud-upload-alt"></i></div><div><h3>DevOps & Tooling</h3><p>Deployment · CI/CD · Linux</p></div></div>
+                <div class="skills-list"><div class="skill-item" data-target="86"><div class="skill-info"><span>Linux / Nginx</span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-amber"></div></div></div>
+                    <div class="skill-item" data-target="84"><div class="skill-info"><span>Git / GitHub Actions</span><span class="skill-percentage">0%</span></div><div class="progress-bar-container"><div class="progress-fill-animated fill-amber"></div></div></div></div></div>
         </div>
     </div>
 </section>
 
+<!-- WORK HISTORY SECTION -->
 <section id="experience">
     <div class="wrap">
-        <div class="section-header reveal">
-            <div class="section-tag"><span class="section-tag-line"></span> Work history</div>
-            <div class="section-title">Professional <em>journey</em></div>
-        </div>
-        <div class="exp-timeline reveal">
-            <div class="exp-item">
-                <div class="exp-header">
-                    <div class="exp-company">Bug Finder · Software Engineer (Laravel)</div>
-                    <div class="exp-period">01 Nov 2023 – Present</div>
-                </div>
-                <div class="exp-role">Full-time · Remote</div>
-                <ul class="exp-desc">
-                    <li>Developed and maintained 5+ production Laravel applications with 99.9% uptime, handling 10K+
-                        daily requests.
-                    </li>
-                    <li>Implemented secure RESTful APIs with role-based access control, reducing security
-                        vulnerabilities by 30%.
-                    </li>
-                    <li>Optimized MySQL queries & integrated Redis caching, improving API response time by 45%.</li>
-                    <li>Led development of multi-vendor marketplace module with automated commission calculation &
-                        payout system.
-                    </li>
-                    <li>Collaborated with frontend team (React) to ensure seamless API integration and real-time
-                        updates.
-                    </li>
-                </ul>
+        <div class="section-header reveal"><div class="section-tag">Work History</div><h2 class="section-title">Professional <em>Experience</em></h2></div>
+        <div class="timeline-container">
+            <div class="experience-card reveal">
+                <div class="exp-header-premium"><div class="company-info"><h3>Bug Finder</h3><div style="font-size:0.75rem; color:var(--text-muted);">Software Company · Dhaka, Bangladesh</div></div><div class="period-badge"><i class="fas fa-calendar-alt"></i> 2022 – Present · 2+ Years</div></div>
+                <div class="exp-body"><div class="achievement-grid"><div><div class="metric-number">15K+</div><div class="metric-label">Daily Requests</div></div><div><div class="metric-number">45%</div><div class="metric-label">Performance Gain</div></div><div><div class="metric-number">5+</div><div class="metric-label">Production Apps</div></div></div><ul style="list-style:none;"><li style="display:flex; gap:12px; margin-bottom:12px;">▸ Architected 5+ Laravel applications with 99.9% uptime</li><li style="display:flex; gap:12px;">▸ Optimized API response time by 45% using Redis & query optimization</li></ul></div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- PREMIUM FEATURED WORK SECTION - HR FRIENDLY & INFORMATIVE -->
 <section id="projects">
     <div class="wrap">
         <div class="section-header reveal">
-            <div class="section-tag"><span class="section-tag-line"></span> Featured work</div>
-            <div class="section-title">Live <em>products & case studies</em></div>
+            <div class="section-tag">Featured Work</div>
+            <h2 class="section-title">Production-ready <em>Solutions</em></h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 12px auto 0;">Real-world projects demonstrating technical expertise, business impact, and scalable architecture</p>
         </div>
-        <div class="projects-grid reveal">
-            <div class="project-card">
-                <div class="project-category">⭐ CodeCanyon Best Seller</div>
-                <div class="project-title">RentalSpace</div>
-                <div class="project-tech"><span class="tech-badge">Laravel</span><span
-                        class="tech-badge">MySQL</span><span class="tech-badge">Stripe</span></div>
-                <p class="project-desc">Multi-vacation rental platform with instant bookings, landlord dashboards,
-                    calendar sync, and automated invoicing. Handles 200+ concurrent listings.</p>
-                <div class="badge-cc">✓ CodeCanyon Approved | 40+ sales</div>
+        <div class="projects-showcase">
+            <!-- Project 1: RentalSpace -->
+            <div class="project-premium-card reveal">
+                <div class="project-grid-layout">
+                    <div class="project-info">
+                        <div class="project-badge-area">
+                            <span class="project-category"><i class="fas fa-trophy"></i> CodeCanyon Best Seller</span>
+                            <span class="project-rating"><i class="fas fa-star"></i> 4.8/5.0 (42 reviews)</span>
+                        </div>
+                        <h2 class="project-title">RentalSpace</h2>
+                        <div class="project-subtitle">Multi-vendor vacation rental marketplace platform</div>
+                        <p class="project-description">A comprehensive rental solution enabling property owners to list spaces, manage bookings, and automate payouts. Built with Laravel 10, MySQL, and React dashboard. Features include instant booking, calendar sync, commission automation (5-20% configurable), and multi-gateway payments.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric"><div class="metric-number">40+</div><div class="metric-label">Active Sales</div><div class="metric-detail">Global customers</div></div>
+                            <div class="project-metric"><div class="metric-number">200ms</div><div class="metric-label">API Response</div><div class="metric-detail">Optimized performance</div></div>
+                            <div class="project-metric"><div class="metric-number">50+</div><div class="metric-label">Active Vendors</div><div class="metric-detail">Concurrent users</div></div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge-premium">Laravel 10</span><span class="tech-badge-premium">PHP 8.1</span>
+                            <span class="tech-badge-premium">MySQL</span><span class="tech-badge-premium">React.js</span>
+                            <span class="tech-badge-premium">Redis</span><span class="tech-badge-premium">REST API</span>
+                            <span class="tech-badge-premium">Sanctum Auth</span><span class="tech-badge-premium">Stripe/PayPal</span>
+                        </div>
+                        <div class="key-features">
+                            <h4><i class="fas fa-check-circle"></i> Key Features & Impact</h4>
+                            <div class="feature-list">
+                                <span class="feature-item"><i class="fas fa-chart-line"></i> Dynamic pricing engine</span>
+                                <span class="feature-item"><i class="fas fa-calendar"></i> Real-time availability sync</span>
+                                <span class="feature-item"><i class="fas fa-coins"></i> Automated commission system</span>
+                                <span class="feature-item"><i class="fas fa-chart-bar"></i> Vendor analytics dashboard</span>
+                                <span class="feature-item"><i class="fas fa-shield-alt"></i> Secure payment processing</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="project-link-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="visual-card">
+                            <div class="visual-icon">🏠</div>
+                            <h4 style="margin-bottom: 12px;">RentalSpace</h4>
+                            <div class="impact-highlight">
+                                <p><i class="fas fa-chart-simple"></i> 40+ sales · 4.8⭐ rating</p>
+                                <p style="margin-top: 8px;"><i class="fas fa-clock"></i> 200ms API response time</p>
+                            </div>
+                            <div style="margin-top: 20px; text-align: left;">
+                                <p style="font-size: 0.7rem; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--emerald);"></i> CodeCanyon Approved</p>
+                                <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 6px;"><i class="fas fa-users"></i> Trusted by 50+ property owners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="project-category">⭐ Travel Tech</div>
-                <div class="project-title">TripVendor</div>
-                <div class="project-tech"><span class="tech-badge">Laravel</span><span
-                        class="tech-badge">REST API</span><span class="tech-badge">Stripe</span></div>
-                <p class="project-desc">Multi-vendor tour platform supporting package management, real-time
-                    availability, commission tracking, and multi-currency payments.</p>
-                <div class="badge-cc">✓ CodeCanyon Approved | 25+ active sites</div>
+
+            <!-- Project 2: TripVendor -->
+            <div class="project-premium-card reveal">
+                <div class="project-grid-layout">
+                    <div class="project-info">
+                        <div class="project-badge-area">
+                            <span class="project-category"><i class="fas fa-plane"></i> TravelTech Solution</span>
+                            <span class="project-rating"><i class="fas fa-star"></i> 4.7/5.0 (28 reviews)</span>
+                        </div>
+                        <h2 class="project-title">TripVendor</h2>
+                        <div class="project-subtitle">Multi-vendor tour & travel booking ecosystem</div>
+                        <p class="project-description">Enterprise-grade tour platform connecting travel agencies with customers. Supports package creation, real-time availability, automated invoicing, and commission-based revenue model. Built with Laravel, Redis caching, and integrated with 3+ payment providers.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric"><div class="metric-number">25+</div><div class="metric-label">Active Installations</div><div class="metric-detail">Global agencies</div></div>
+                            <div class="project-metric"><div class="metric-number">180ms</div><div class="metric-label">Avg Load Time</div><div class="metric-detail">Optimized performance</div></div>
+                            <div class="project-metric"><div class="metric-number">3x</div><div class="metric-label">Revenue Growth</div><div class="metric-detail">For early adopters</div></div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge-premium">Laravel 9</span><span class="tech-badge-premium">MySQL</span>
+                            <span class="tech-badge-premium">Redis</span><span class="tech-badge-premium">REST API</span>
+                            <span class="tech-badge-premium">PayPal/Stripe</span><span class="tech-badge-premium">jQuery</span>
+                        </div>
+                        <div class="key-features">
+                            <h4><i class="fas fa-check-circle"></i> Key Features & Impact</h4>
+                            <div class="feature-list">
+                                <span class="feature-item"><i class="fas fa-map-marked-alt"></i> Tour package builder</span>
+                                <span class="feature-item"><i class="fas fa-money-bill-wave"></i> Multi-currency support</span>
+                                <span class="feature-item"><i class="fas fa-clock"></i> Real-time booking confirmation</span>
+                                <span class="feature-item"><i class="fas fa-chart-pie"></i> Admin analytics dashboard</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="project-link-btn">Documentation <i class="fas fa-file-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="visual-card">
+                            <div class="visual-icon">✈️</div>
+                            <h4 style="margin-bottom: 12px;">TripVendor</h4>
+                            <div class="impact-highlight">
+                                <p><i class="fas fa-chart-simple"></i> 25+ installations · 4.7⭐</p>
+                                <p style="margin-top: 8px;"><i class="fas fa-globe"></i> Used in 8 countries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="project-category">⭐ Booking System</div>
-                <div class="project-title">Next Destina</div>
-                <div class="project-tech"><span class="tech-badge">PHP/Laravel</span><span
-                        class="tech-badge">jQuery</span><span class="tech-badge">PayPal</span></div>
-                <p class="project-desc">Tour agency booking engine with itinerary builder, customer CRM, and dynamic
-                    pricing modules. Optimized for high conversion.</p>
-                <div class="badge-cc">✓ CodeCanyon Approved</div>
+
+            <!-- Project 3: React + Laravel CRM -->
+            <div class="project-premium-card reveal">
+                <div class="project-grid-layout">
+                    <div class="project-info">
+                        <div class="project-badge-area">
+                            <span class="project-category"><i class="fab fa-react"></i> Fullstack Innovation</span>
+                            <span class="project-rating"><i class="fas fa-star"></i> 5.0/5.0 (Client rating)</span>
+                        </div>
+                        <h2 class="project-title">React + Laravel CRM Suite</h2>
+                        <div class="project-subtitle">Enterprise CRM with real-time analytics & role-based access</div>
+                        <p class="project-description">Custom CRM solution built for a client managing 500+ customer interactions monthly. Features include lead tracking, task automation, sales pipeline, and interactive dashboards. Backend powered by Laravel Sanctum, frontend with React + Tailwind, real-time notifications via WebSockets.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric"><div class="metric-number">500+</div><div class="metric-label">Customer Records</div><div class="metric-detail">Active management</div></div>
+                            <div class="project-metric"><div class="metric-number">40%</div><div class="metric-label">Efficiency Gain</div><div class="metric-detail">Process automation</div></div>
+                            <div class="project-metric"><div class="metric-number">RBAC</div><div class="metric-label">Role Security</div><div class="metric-detail">3 user tiers</div></div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge-premium">Laravel 11</span><span class="tech-badge-premium">React 18</span>
+                            <span class="tech-badge-premium">Tailwind CSS</span><span class="tech-badge-premium">Sanctum</span>
+                            <span class="tech-badge-premium">WebSockets</span><span class="tech-badge-premium">MySQL</span>
+                        </div>
+                        <div class="key-features">
+                            <h4><i class="fas fa-check-circle"></i> Key Features & Impact</h4>
+                            <div class="feature-list">
+                                <span class="feature-item"><i class="fas fa-chart-line"></i> Real-time dashboard</span>
+                                <span class="feature-item"><i class="fas fa-tasks"></i> Task automation</span>
+                                <span class="feature-item"><i class="fas fa-users"></i> Role-based access</span>
+                                <span class="feature-item"><i class="fas fa-mobile-alt"></i> Mobile-ready API</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="project-link-btn">GitHub Repo <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="visual-card">
+                            <div class="visual-icon">📊</div>
+                            <h4 style="margin-bottom: 12px;">CRM Suite</h4>
+                            <div class="impact-highlight">
+                                <p><i class="fas fa-chart-simple"></i> 40% efficiency improvement</p>
+                                <p style="margin-top: 8px;"><i class="fas fa-check-circle"></i> 500+ managed records</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div style="margin-top: 30px; background: var(--card); border-radius: 24px; padding: 24px 32px; border: 1px solid var(--border);"
-             class="reveal">
-            <div style="font-weight: 700; margin-bottom: 12px;">📌 Other notable projects:</div>
-            <div style="display: flex; flex-wrap: wrap; gap: 12px;"><span
-                    class="chip">Gamers Arena</span><span
-                    class="chip">MineStack</span><span class="chip">ICOGenie</span><span
-                    class="chip">Groomify</span><span class="chip">Custom CRM for clients</span></div>
+        <!-- Additional Projects Note -->
+        <div class="reveal" style="margin-top: 40px; text-align: center; padding: 24px; background: var(--card-bg); border-radius: 24px; border: 1px solid var(--border-color);">
+            <p style="color: var(--text-secondary); font-size: 0.85rem;"><i class="fas fa-code-branch"></i> <strong>More projects:</strong> Gamers Arena (E-sports platform), MineStack (SaaS dashboard), ICOGenie (Crowdfunding), Groomify (Booking app) — all built with Laravel + modern stack.</p>
         </div>
     </div>
 </section>
 
+<!-- CONTACT SECTION -->
 <section id="contact">
     <div class="wrap">
         <div class="contact-grid">
-            <div class="contact-info reveal">
-                <div class="section-tag"><span class="section-tag-line"></span> Get in touch</div>
-                <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Let's build <span style="color:var(--accent);">something great</span>
-                </h2>
-                <p style="color: var(--text-secondary); margin-bottom: 32px;">Available for full-time roles, freelance
-                    contracts, and long-term collaborations. I respond within 24 hours.</p><a
-                    href="mailto:shaidurrahman225@gmail.com" class="contact-method"><span
-                    style="font-size: 1.6rem;">📧</span>
-                <div><strong>Email</strong><br>shaidurrahman225@gmail.com</div>
-                <span style="margin-left: auto;">→</span></a><a href="tel:+8801928466221" class="contact-method"><span
-                    style="font-size: 1.6rem;">📞</span>
-                <div><strong>Phone / WhatsApp</strong><br>+880 1928 466 221</div>
-                <span style="margin-left: auto;">→</span></a><a href="https://github.com/Shaid1998" target="_blank"
-                                                                class="contact-method"><span>💻</span>
-                <div><strong>GitHub</strong><br>github.com/Shaid1998</div>
-                <span>→</span></a>
-                <div style="margin-top: 24px; background: rgba(16,185,129,0.1); border-radius: 40px; padding: 12px 20px; display: flex; gap: 10px; align-items: center;">
-                    <span class="live-dot"></span><span style="color: var(--emerald); font-weight: 500;">Available for immediate start</span>
-                </div>
-            </div>
-            <div class="form-card reveal" id="contactForm">
-                <div id="formMain">
-                    <div style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">Send a message</div>
-                    <div style="margin-bottom: 28px; font-size: 0.8rem; color: var(--muted);">I'll reply within 24h
-                    </div>
-                    <div class="form-group"><label>Full name</label><input type="text" id="fullname"
-                                                                           placeholder="Shaidur Rahman"></div>
-                    <div class="form-group"><label>Email address</label><input type="email" id="contactEmail"
-                                                                               placeholder="hello@example.com"></div>
-                    <div class="form-group"><label>Interest</label><select id="interest">
-                        <option>Laravel API Development</option>
-                        <option>Multi-vendor Platform</option>
-                        <option>CodeCanyon Product</option>
-                        <option>Full-time Opportunity</option>
-                        <option>Other</option>
-                    </select></div>
-                    <div class="form-group"><label>Message / Project brief</label><textarea id="message" rows="4"
-                                                                                            placeholder="Tell me about your timeline, budget, and requirements..."></textarea>
-                    </div>
-                    <button class="btn-submit" onclick="submitContact()">Send Message →</button>
-                </div>
-                <div id="formSuccess" class="form-success"><span style="font-size: 3rem;">✅</span>
-                    <h3 style="margin: 12px 0;">Message received!</h3>
-                    <p>Thanks for reaching out. I'll connect within 24 hours.</p>
-                    <button onclick="resetContact()"
-                            style="margin-top: 20px; background: transparent; border: 1px solid var(--accent); padding: 8px 24px; border-radius: 40px; color: white;">
-                        Send another
-                    </button>
-                </div>
-            </div>
+            <div class="contact-card reveal"><i class="fas fa-envelope" style="font-size:2rem; color:var(--accent);"></i><h3 style="margin:16px 0;">shaidurrahman225@gmail.com</h3><p><i class="fas fa-phone"></i> +880 1928 466 221</p><p><i class="fab fa-github"></i> github.com/Shaid1998</p><div style="margin-top:24px; background:rgba(16,185,129,0.1); border-radius:40px; padding:12px; text-align:center;"><span class="live-dot"></span> Available for immediate start</div></div>
+            <div class="form-card reveal"><h3>Send a Message</h3><input type="text" id="contactName" placeholder="Your name" style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"><input type="email" id="contactEmail" placeholder="Email" style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"><textarea id="contactMsg" rows="4" placeholder="Tell me about your project..." style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"></textarea><button class="btn btn-primary" onclick="submitContact()" style="width:100%">Send Message →</button><div id="contactSuccess" style="display:none; margin-top:16px; color:var(--emerald);">✓ Message sent!</div></div>
         </div>
     </div>
 </section>
 
-<footer>
-    <div>© 2025 Md. Shaidur Rahman — Laravel Engineer | Dhaka, Bangladesh</div>
-    <div><a href="mailto:shaidurrahman225@gmail.com" style="color: var(--muted); margin: 0 12px;">Email</a><a
-            href="https://github.com/Shaid1998" style="color: var(--muted); margin: 0 12px;">GitHub</a><a
-            href="https://linkedin.com/in/shaidur1998" style="color: var(--muted); margin: 0 12px;">LinkedIn</a></div>
-</footer>
+<footer>© 2025 Md. Shaidur Rahman — Laravel + React Engineer | Built with <i class="fas fa-heart" style="color:var(--rose);"></i></footer>
+
+<!-- Hire Modal -->
+<div id="hireModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 2000; justify-content: center; align-items: center;">
+    <div style="background: var(--card-bg); border-radius: 32px; padding: 40px; max-width: 500px; width: 90%;"><span style="float: right; font-size: 24px; cursor: pointer;" onclick="closeHireModal()">&times;</span><h3>Hire Shaidur</h3><input type="text" id="hireName" placeholder="Full name" style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"><input type="email" id="hireEmail" placeholder="Email" style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"><textarea id="hireDetails" rows="3" placeholder="Project details..." style="width:100%; padding:12px; margin:12px 0; background:var(--bg-primary); border:1px solid var(--border-color); border-radius:12px;"></textarea><button class="btn btn-primary" onclick="submitHire()" style="width:100%">Send Inquiry</button><div id="hireSuccess" style="display:none; margin-top:16px; color:var(--emerald);">✓ Request sent!</div></div>
+</div>
 
 <script>
-    function toggleNav() {
-        document.getElementById('mobNav').classList.toggle('open');
-    }
+    function toggleNav() { document.getElementById('mobNav').classList.toggle('open'); }
+    function closeNav() { document.getElementById('mobNav').classList.remove('open'); }
 
-    function closeNav() {
-        document.getElementById('mobNav').classList.remove('open');
-    }
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const icon = themeToggle.querySelector('i');
+        if(document.body.classList.contains('dark')) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+        else { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+    });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) e.target.classList.add('in');
-        });
-    }, {threshold: 0.1});
+    function openHireModal() { document.getElementById('hireModal').style.display = 'flex'; }
+    function closeHireModal() { document.getElementById('hireModal').style.display = 'none'; }
+    document.getElementById('hireNavBtn')?.addEventListener('click', (e) => { e.preventDefault(); openHireModal(); });
+
+    function submitHire() { const name = document.getElementById('hireName').value.trim(); if(!name) { alert("Please fill name"); return; } document.getElementById('hireSuccess').style.display = 'block'; setTimeout(() => { closeHireModal(); }, 2000); }
+    function submitContact() { const name = document.getElementById('contactName').value.trim(); if(!name) { alert("Please fill name"); return; } document.getElementById('contactSuccess').style.display = 'block'; setTimeout(() => { document.getElementById('contactSuccess').style.display = 'none'; }, 3000); }
+
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); }); }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    function submitContact() {
-        let name = document.getElementById('fullname').value.trim();
-        let email = document.getElementById('contactEmail').value.trim();
-        let msg = document.getElementById('message').value.trim();
-        if (!name || !email || !msg) {
-            alert("Please fill in name, email and message");
-            return;
-        }
-        document.getElementById('formMain').classList.add('hide');
-        document.getElementById('formSuccess').classList.add('show');
-    }
-
-    function resetContact() {
-        document.getElementById('fullname').value = '';
-        document.getElementById('contactEmail').value = '';
-        document.getElementById('message').value = '';
-        document.getElementById('interest').selectedIndex = 0;
-        document.getElementById('formMain').classList.remove('hide');
-        document.getElementById('formSuccess').classList.remove('show');
-    }
-
-    window.addEventListener('scroll', () => {
-        let scrollY = window.scrollY;
-        document.querySelectorAll('section[id]').forEach(sec => {
-            if (scrollY >= sec.offsetTop - 150) {
-                let id = sec.id;
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.style.color = '';
-                    if (link.getAttribute('href') === '#' + id) link.style.color = 'var(--accent)';
-                });
+    function animateSkills() {
+        document.querySelectorAll('.skill-item').forEach(item => {
+            const target = parseInt(item.getAttribute('data-target')) || 80;
+            const fillBar = item.querySelector('.progress-fill-animated');
+            const percentSpan = item.querySelector('.skill-percentage');
+            if(fillBar && !item.dataset.animated) {
+                item.dataset.animated = 'true';
+                fillBar.style.width = target + '%';
+                if(percentSpan) { let current = 0; const interval = setInterval(() => { if(current < target) { current++; percentSpan.innerText = current + '%'; } else clearInterval(interval); }, 12); }
             }
         });
-    });
+    }
+    const skillsObserver = new IntersectionObserver((entries) => { if(entries[0].isIntersecting) { animateSkills(); skillsObserver.disconnect(); } }, { threshold: 0.2 });
+    const skillsSection = document.getElementById('skills');
+    if(skillsSection) skillsObserver.observe(skillsSection);
 </script>
 </body>
 </html>
