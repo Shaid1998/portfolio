@@ -3,110 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaidur Rahman</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>Shaidur Rahman — Laravel Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">+
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="a1 ambient"></div>
+<div class="a2 ambient"></div>
+<div class="a3 ambient"></div>
+
+<!-- NAV -->
 <nav>
-    <h2>Shaidur</h2>
+    <a href="#hero" class="logo">Shaidur<em>.</em></a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+    </ul>
+    <div class="ham" onclick="toggleNav()" id="ham">
+        <span></span><span></span><span></span>
+    </div>
 </nav>
+<div class="mob-nav" id="mobNav">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#skills" onclick="closeNav()">Skills</a>
+    <a href="#experience" onclick="closeNav()">Experience</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#education" onclick="closeNav()">Education</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
+</div>
 
 <!-- HERO -->
-<section class="hero">
-    <h1 id="typing"></h1>
-    <p>Software Engineer | Laravel Developer</p>
+<section id="hero">
+    <div class="hero-inner">
+        <div class="hero-eyebrow"><span class="dot-live"></span>Open to New Opportunities</div>
+        <h1 class="hero-h1">
+            <span class="dim">md.</span> Shaidur<br>
+            <span class="hl">Rahman</span>
+        </h1>
+        <p class="hero-sub">Software Engineer specializing in Laravel backend development. I build scalable web apps, clean RESTful APIs, and production-level platforms that ship on time.</p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn btn-p">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Let's Work Together
+            </a>
+            <a href="https://github.com/Shaid1998" target="_blank" class="btn btn-s">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="https://linkedin.com/in/shaidur1998" target="_blank" class="btn btn-s">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+        </div>
+        <div class="hero-kpis">
+            <div class="kpi">
+                <div class="kpi-n">2<span>+</span></div>
+                <div class="kpi-l">Years Exp.</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-n">3<span>+</span></div>
+                <div class="kpi-l">CC Products</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-n">10<span>+</span></div>
+                <div class="kpi-l">Projects</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="wrap">
+        <div class="about-grid reveal">
+            <div>
+                <div class="about-label">About Me</div>
+                <p class="about-text">
+                    I'm a <strong>Laravel-focused Software Engineer</strong> with 2+ years of professional experience building production-grade backend systems. I specialize in crafting <strong>RESTful APIs</strong>, secure authentication, and multi-vendor platforms built to scale.<br><br>
+                    As a <strong>CodeCanyon-approved contributor</strong>, my work meets commercial quality standards. I care deeply about clean architecture, performance, and shipping products that actually work.
+                </p>
+            </div>
+            <div>
+                <div class="about-label" style="margin-bottom:14px">Core Stack</div>
+                <div class="about-chips">
+                    <span class="chip">Laravel</span><span class="chip">PHP</span>
+                    <span class="chip">MySQL</span><span class="chip">RESTful API</span>
+                    <span class="chip">Redis</span><span class="chip">React</span>
+                    <span class="chip">Node.js</span><span class="chip">Linux</span>
+                    <span class="chip">Nginx</span><span class="chip">Git</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="wrap">
+        <div class="sh reveal">
+            <div class="sh-label"><span class="sh-line"></span>Technical Skills</div>
+            <div class="sh-title">What I Work <em>With</em></div>
+        </div>
+        <div class="skills-grid">
+            <div class="sk-card reveal d1">
+                <div class="sk-icon">⚙️</div>
+                <div class="sk-name">Backend</div>
+                <div class="sk-tags">
+                    <span class="stag">Laravel</span><span class="stag">PHP</span>
+                    <span class="stag">REST API</span><span class="stag">Auth</span>
+                    <span class="stag">Jobs</span><span class="stag">Redis</span><span class="stag">Node.js</span>
+                </div>
+            </div>
+            <div class="sk-card reveal d2">
+                <div class="sk-icon">🎨</div>
+                <div class="sk-name">Frontend</div>
+                <div class="sk-tags">
+                    <span class="stag g">HTML</span><span class="stag g">CSS</span>
+                    <span class="stag g">JavaScript</span><span class="stag g">React</span>
+                </div>
+            </div>
+            <div class="sk-card reveal d3">
+                <div class="sk-icon">🗄️</div>
+                <div class="sk-name">Database</div>
+                <div class="sk-tags">
+                    <span class="stag r">MySQL</span><span class="stag r">MariaDB</span><span class="stag r">PostgreSQL</span>
+                </div>
+            </div>
+            <div class="sk-card reveal d4">
+                <div class="sk-icon">🚀</div>
+                <div class="sk-name">Deployment</div>
+                <div class="sk-tags">
+                    <span class="stag a">VPS/Shared</span><span class="stag a">cPanel</span>
+                    <span class="stag a">Nginx</span><span class="stag a">Linux</span>
+                </div>
+            </div>
+            <div class="sk-card reveal d5">
+                <div class="sk-icon">🛠️</div>
+                <div class="sk-name">Tools</div>
+                <div class="sk-tags">
+                    <span class="stag n">Git</span><span class="stag n">GitHub</span><span class="stag n">Postman</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="wrap">
+        <div class="sh reveal">
+            <div class="sh-label"><span class="sh-line"></span>Work Experience</div>
+            <div class="sh-title">Where I've <em>Worked</em></div>
+        </div>
+        <div class="exp-card reveal">
+            <div>
+                <div class="exp-top">
+                    <div class="exp-co">Bug Finder</div>
+                    <div class="exp-verified">✓ Verified</div>
+                </div>
+                <div class="exp-role-label">Software Engineer · Laravel Developer</div>
+                <div class="exp-items">
+                    <div class="exp-item">Built and maintained scalable Laravel backend applications using clean MVC architecture, service classes, and repository patterns for long-term maintainability.</div>
+                    <div class="exp-item">Implemented secure RESTful APIs with Sanctum/Passport authentication and granular role-based access control across multiple user types.</div>
+                    <div class="exp-item">Optimized complex MySQL queries, introduced query caching with Redis, resolved critical production bugs, and significantly improved system throughput.</div>
+                </div>
+            </div>
+            <div>
+                <div class="tenure-box">
+                    <div class="tenure-num">2+</div>
+                    <div class="tenure-unit">Years</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid" id="github-projects"></div>
+    <div class="wrap">
+        <div class="sh reveal">
+            <div class="sh-label"><span class="sh-line"></span>Projects</div>
+            <div class="sh-title">Things I've <em>Built</em></div>
+        </div>
+        <div class="proj-grid">
+            <div class="proj-card reveal d1">
+                <div class="proj-n">01 — Rental</div>
+                <div class="proj-title">RentalSpace</div>
+                <div class="proj-sub">Vacation Rental Script</div>
+                <p class="proj-desc">Multi-vendor vacation rental platform with instant bookings, listing management, commission control, and a complete admin dashboard.</p>
+                <div class="proj-badge">✓ CodeCanyon Approved</div>
+            </div>
+            <div class="proj-card reveal d2">
+                <div class="proj-n">02 — Travel</div>
+                <div class="proj-title">TripVendor</div>
+                <div class="proj-sub">Multi-Vendor Tour Platform</div>
+                <p class="proj-desc">Vendor-managed tour packages with secure bookings, commission control, direct payouts, and multiple integrated payment gateways.</p>
+                <div class="proj-badge">✓ CodeCanyon Approved</div>
+            </div>
+            <div class="proj-card reveal d3">
+                <div class="proj-n">03 — Booking</div>
+                <div class="proj-title">Next Destina</div>
+                <div class="proj-sub">Tour & Travel Booking</div>
+                <p class="proj-desc">Agency-focused booking system for tour packages, reservations, customer management, and fully integrated payment processing.</p>
+                <div class="proj-badge">✓ CodeCanyon Approved</div>
+            </div>
+            <div class="proj-others reveal">
+                <div class="proj-others-label">More Work</div>
+                <div class="proj-others-tags">
+                    <span class="otag">Gamers Arena</span>
+                    <span class="otag">MineStack</span>
+                    <span class="otag">ICOGenie</span>
+                    <span class="otag">Groomify</span>
+                    <span class="otag">Custom Client Projects</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <div class="wrap">
+        <div class="sh reveal">
+            <div class="sh-label"><span class="sh-line"></span>Education</div>
+            <div class="sh-title">Academic <em>Background</em></div>
+        </div>
+        <div class="edu-card reveal">
+            <div class="edu-ico">🎓</div>
+            <div>
+                <div class="edu-degree">B.Sc. in Software Engineering</div>
+                <div class="edu-uni">Daffodil International University</div>
+                <div class="edu-meta">
+                    <span class="edu-pill">2018 – 2022</span>
+                    <span class="edu-pill">Dhaka, Bangladesh</span>
+                    <span class="edu-pill gpa">CGPA 3.32 / 4.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact</h2>
+    <div class="wrap">
+        <div class="sh reveal">
+            <div class="sh-label"><span class="sh-line"></span>Contact</div>
+            <div class="sh-title">Let's <em>Connect</em></div>
+        </div>
+        <div class="contact-wrap">
 
-    <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
+            <!-- LEFT -->
+            <div class="contact-info reveal">
+                <p class="contact-tagline">Got a project in <em>mind?</em><br>Let's talk.</p>
+                <p class="contact-sub">Whether you need a full backend, an API integration, or a complete web platform — I'm ready to deliver quality work.</p>
+                <div class="contact-channels">
+                    <a href="mailto:shaidurrahman225@gmail.com" class="c-channel">
+                        <div class="c-icon">✉️</div>
+                        <div>
+                            <div class="c-label">Email</div>
+                            <div class="c-val">shaidurrahman225@gmail.com</div>
+                        </div>
+                        <span class="c-arr">→</span>
+                    </a>
+                    <a href="tel:+8801928466221" class="c-channel">
+                        <div class="c-icon">📞</div>
+                        <div>
+                            <div class="c-label">Phone</div>
+                            <div class="c-val">+880 1928 466 221</div>
+                        </div>
+                        <span class="c-arr">→</span>
+                    </a>
+                    <a href="https://github.com/Shaid1998" target="_blank" class="c-channel">
+                        <div class="c-icon">💻</div>
+                        <div>
+                            <div class="c-label">GitHub</div>
+                            <div class="c-val">github.com/Shaid1998</div>
+                        </div>
+                        <span class="c-arr">→</span>
+                    </a>
+                    <a href="https://linkedin.com/in/shaidur1998" target="_blank" class="c-channel">
+                        <div class="c-icon">🔗</div>
+                        <div>
+                            <div class="c-label">LinkedIn</div>
+                            <div class="c-val">linkedin.com/in/shaidur1998</div>
+                        </div>
+                        <span class="c-arr">→</span>
+                    </a>
+                </div>
+                <div class="avail-strip">
+                    <div class="avail-dot"></div>
+                    <p class="avail-text">Currently available — freelance & full-time</p>
+                </div>
+            </div>
 
+            <!-- RIGHT: FORM -->
+            <div class="form-card reveal d2">
+                <div class="form-main" id="formMain">
+                    <div class="form-title">Send a Message</div>
+                    <div class="form-sub">I'll get back to you within 24 hours.</div>
+                    <div class="form-row">
+                        <div class="fgroup">
+                            <label>First Name</label>
+                            <input type="text" id="fname" placeholder="John">
+                        </div>
+                        <div class="fgroup">
+                            <label>Last Name</label>
+                            <input type="text" id="lname" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="fgroup">
+                        <label>Email Address</label>
+                        <input type="email" id="femail" placeholder="john@example.com">
+                    </div>
+                    <div class="fgroup">
+                        <label>Topic</label>
+                        <select id="fsubject">
+                            <option value="" disabled selected>Select a topic…</option>
+                            <option>Freelance Project</option>
+                            <option>Full-time Opportunity</option>
+                            <option>API / Backend Work</option>
+                            <option>CodeCanyon Product</option>
+                            <option>General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="fgroup">
+                        <label>Message</label>
+                        <textarea id="fmsg" placeholder="Tell me about your project, timeline, and budget…"></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <div class="form-note"><span>🔒</span> Your info is private & never shared.</div>
+                        <button class="btn-submit" onclick="submitForm()">
+                            Send Message
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-success" id="formSuccess">
+                    <div class="success-ico">🎉</div>
+                    <div class="success-title">Message Sent!</div>
+                    <p class="success-sub">Thanks for reaching out.<br>I'll reply to you within 24 hours.</p>
+                    <button class="btn btn-s" onclick="resetForm()" style="margin-top:12px">Send Another →</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span id="close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <p id="modal-desc"></p>
-    </div>
-</div>
-
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Shaidur Rahman</p>
+    <div class="footer-l">© 2025 Md. Shaidur Rahman · Laravel Developer · Dhaka, Bangladesh</div>
+    <div class="footer-r">
+        <a href="mailto:shaidurrahman225@gmail.com">Email</a>
+        <a href="https://github.com/Shaid1998" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/shaidur1998" target="_blank">LinkedIn</a>
+    </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-    AOS.init();
+    function toggleNav() { document.getElementById('mobNav').classList.toggle('open'); }
+    function closeNav() { document.getElementById('mobNav').classList.remove('open'); }
 
-    /* 🔥 Typing Animation */
-    const text = "Md. Shaidur Rahman";
-    let i = 0;
-    function typing() {
-        if (i < text.length) {
-            document.getElementById("typing").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typing, 80);
-        }
-    }
-    typing();
+    // Scroll reveal
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-    /* 🔥 GitHub API */
-    fetch("https://api.github.com/users/Shaid1998/repos")
-        .then(res => res.json())
-        .then(data => {
-            const container = document.getElementById("github-projects");
-
-            data.slice(0,6).forEach(repo => {
-                const div = document.createElement("div");
-                div.classList.add("card");
-
-                div.innerHTML = `
-        <h3>${repo.name}</h3>
-        <p>${repo.description || "No description"}</p>
-        <button onclick="openModal('${repo.name}', '${repo.description}')">Details</button>
-        <a href="${repo.html_url}" target="_blank">GitHub</a>
-      `;
-
-                container.appendChild(div);
-            });
+    // Active nav on scroll
+    const secs = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        let cur = '';
+        secs.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--accent)' : '';
         });
+    }, { passive: true });
 
-    /* 🔥 Modal */
-    function openModal(title, desc) {
-        document.getElementById("modal").style.display = "block";
-        document.getElementById("modal-title").innerText = title;
-        document.getElementById("modal-desc").innerText = desc;
+    // Form
+    function submitForm() {
+        const name = document.getElementById('fname').value.trim();
+        const email = document.getElementById('femail').value.trim();
+        const msg = document.getElementById('fmsg').value.trim();
+        const fields = [
+            { id: 'fname', val: name },
+            { id: 'femail', val: email },
+            { id: 'fmsg', val: msg },
+        ];
+        let valid = true;
+        fields.forEach(f => {
+            const el = document.getElementById(f.id);
+            if (!f.val) {
+                el.style.borderColor = 'rgba(251,113,133,0.7)';
+                el.style.boxShadow = '0 0 0 3px rgba(251,113,133,0.1)';
+                setTimeout(() => { el.style.borderColor = ''; el.style.boxShadow = ''; }, 2500);
+                valid = false;
+            }
+        });
+        if (!valid) return;
+        document.getElementById('formMain').classList.add('hide');
+        document.getElementById('formSuccess').classList.add('show');
     }
 
-    document.getElementById("close").onclick = () => {
-        document.getElementById("modal").style.display = "none";
+    function resetForm() {
+        ['fname','lname','femail','fmsg'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.value = '';
+        });
+        document.getElementById('fsubject').selectedIndex = 0;
+        document.getElementById('formMain').classList.remove('hide');
+        document.getElementById('formSuccess').classList.remove('show');
     }
-</script>
 
 </body>
 </html>
